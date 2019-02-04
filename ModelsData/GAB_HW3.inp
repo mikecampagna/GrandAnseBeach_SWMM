@@ -48,7 +48,7 @@ DRY_ONLY         NO
 [RAINGAGES]
 ;;Name           Format    Interval SCF      Source    
 ;;-------------- --------- ------ ------ ----------
-RainGage         INTENSITY 1:00     1.0      TIMESERIES PHL             
+RainGage         INTENSITY 1:00     1.0      TIMESERIES SanJuan         
 
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
@@ -217,7 +217,7 @@ O1               0          FREE                        NO
 50-yr                       1:50       0.6       
 50-yr                       1:55       0.6       
 ;
-PHL              FILE "D:\GitHub\GrandAnseBeach_SWMM\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+PHL              FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
 ;
 SanJuan          FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
 
@@ -236,7 +236,7 @@ Units      Feet
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord           
 ;;-------------- ------------------ ------------------
-O1               9602.417           6256.301          
+O1               9814.707           5981.573          
 
 [VERTICES]
 ;;Link           X-Coord            Y-Coord           
