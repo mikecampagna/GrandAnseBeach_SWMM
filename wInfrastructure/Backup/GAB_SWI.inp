@@ -240,34 +240,34 @@ C23              J15              J8               862.75     0.01       0      
 [XSECTIONS]
 ;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
 ;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
-C1               TRAPEZOIDAL  2                3          1          1          1                    
-C5               TRAPEZOIDAL  3                4          1          1          1                    
+C1               TRAPEZOIDAL  2                4          1          1          1                    
+C5               TRAPEZOIDAL  2                4          1          1          1                    
 C7               RECT_OPEN    3                3          0          0          1                    
-C8               TRAPEZOIDAL  3                4          1          1          1                    
-C9               TRAPEZOIDAL  3                4          1          1          1                    
-C10              TRAPEZOIDAL  3                4          1          1          1                    
-C11              TRAPEZOIDAL  3                4          1          1          1                    
+C8               TRAPEZOIDAL  2                4          1          1          1                    
+C9               TRAPEZOIDAL  2                4          1          1          1                    
+C10              TRAPEZOIDAL  2                4          1          1          1                    
+C11              TRAPEZOIDAL  2                4          1          1          1                    
 C12              RECT_OPEN    3                3          0          0          1                    
-C13              TRAPEZOIDAL  3                4          1          1          1                    
-C14              TRAPEZOIDAL  3                4          1          1          1                    
-C15              TRAPEZOIDAL  3                4          1          1          1                    
-C16              TRAPEZOIDAL  3                4          1          1          1                    
-C17              TRAPEZOIDAL  3                4          1          1          1                    
-C18              TRAPEZOIDAL  3                4          1          1          1                    
-C19              TRAPEZOIDAL  3                4          1          1          1                    
-C20              TRAPEZOIDAL  3                4          1          1          1                    
-C21              TRAPEZOIDAL  3                4          1          1          1                    
+C13              TRAPEZOIDAL  2                4          1          1          1                    
+C14              TRAPEZOIDAL  2                4          1          1          1                    
+C15              TRAPEZOIDAL  2                4          1          1          1                    
+C16              TRAPEZOIDAL  2                4          1          1          1                    
+C17              TRAPEZOIDAL  2                4          1          1          1                    
+C18              TRAPEZOIDAL  2                4          1          1          1                    
+C19              TRAPEZOIDAL  2                4          1          1          1                    
+C20              TRAPEZOIDAL  2                4          1          1          1                    
+C21              TRAPEZOIDAL  2                4          1          1          1                    
 C22              RECT_OPEN    3                3          0          0          1                    
-C23              TRAPEZOIDAL  3                4          1          1          1                    
-45               TRAPEZOIDAL  3                4          1          1          1                    
-46               TRAPEZOIDAL  3                4          1          1          1                    
-47               CIRCULAR     1                0          0          0          1                    
-48               CIRCULAR     1                0          0          0          1                    
-49               TRAPEZOIDAL  3                4          1          1          1                    
-50               TRAPEZOIDAL  3                4          1          1          1                    
-51               TRAPEZOIDAL  3                4          1          1          1                    
-52               TRAPEZOIDAL  3                4          1          1          1                    
-53               TRAPEZOIDAL  3                4          1          1          1                    
+C23              TRAPEZOIDAL  2                4          1          1          1                    
+45               TRAPEZOIDAL  2                4          1          1          1                    
+46               TRAPEZOIDAL  2                4          1          1          1                    
+47               TRAPEZOIDAL  2                4          1          1          1                    
+48               TRAPEZOIDAL  2                4          1          1          1                    
+49               TRAPEZOIDAL  2                4          1          1          1                    
+50               TRAPEZOIDAL  2                4          1          1          1                    
+51               TRAPEZOIDAL  2                4          1          1          1                    
+52               TRAPEZOIDAL  2                4          1          1          1                    
+53               TRAPEZOIDAL  2                4          1          1          1                    
 
 [INFLOWS]
 ;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
