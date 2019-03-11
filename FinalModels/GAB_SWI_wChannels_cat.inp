@@ -306,30 +306,30 @@ J28              FLOW             ""               FLOW     1.0      1.0      0.
 [CURVES]
 ;;Name           Type       X-Value    Y-Value   
 ;;-------------- ---------- ---------- ----------
-TidalBounds      Tidal      0          0.24384   
-TidalBounds                 1          0.25908   
-TidalBounds                 2          0.249936  
-TidalBounds                 3          0.24384   
-TidalBounds                 4          0.237744  
-TidalBounds                 5          0.24384   
-TidalBounds                 6          0.249936  
-TidalBounds                 7          0.25908   
-TidalBounds                 8          0.265176  
-TidalBounds                 9          0.268224  
-TidalBounds                 10         0.27432   
-TidalBounds                 11         0.3048    
-TidalBounds                 12         0.32004   
-TidalBounds                 13         0.310896  
-TidalBounds                 14         0.3048    
-TidalBounds                 15         0.27432   
-TidalBounds                 16         0.25908   
-TidalBounds                 17         0.24384   
-TidalBounds                 18         0.2286    
-TidalBounds                 19         0.21336   
-TidalBounds                 20         0.19812   
-TidalBounds                 21         0.207264  
-TidalBounds                 22         0.21336   
-TidalBounds                 23         0.2286    
+TidalBounds      Tidal      0          1.577173  
+TidalBounds                 1          1.592413  
+TidalBounds                 2          1.583269  
+TidalBounds                 3          1.577173  
+TidalBounds                 4          1.571077  
+TidalBounds                 5          1.577173  
+TidalBounds                 6          1.583269  
+TidalBounds                 7          1.592413  
+TidalBounds                 8          1.598509  
+TidalBounds                 9          1.601557  
+TidalBounds                 10         1.607653  
+TidalBounds                 11         1.638133  
+TidalBounds                 12         1.653373  
+TidalBounds                 13         1.644229  
+TidalBounds                 14         1.638133  
+TidalBounds                 15         1.607653  
+TidalBounds                 16         1.592413  
+TidalBounds                 17         1.577173  
+TidalBounds                 18         1.561933  
+TidalBounds                 19         1.546693  
+TidalBounds                 20         1.531453  
+TidalBounds                 21         1.540597  
+TidalBounds                 22         1.546693  
+TidalBounds                 23         1.561933  
 
 [TIMESERIES]
 ;;Name           Date       Time       Value     

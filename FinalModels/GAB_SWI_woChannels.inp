@@ -53,21 +53,21 @@ RainGage         INTENSITY 1:00     1.0      TIMESERIES SanJuan
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-S1               RainGage         J1               67.42    15       11747    12       0                        
-S2               RainGage         J11              24.87    18       4333     12       0                        
-S3               RainGage         J12              20.69    26       3605     12       0                        
-S4               RainGage         J13              38.40    26       6691     12       0                        
-S5               RainGage         J5               9.76     36       1701     12       0                        
-S6               RainGage         J9               34.30    36       5976     12       0                        
-S7               RainGage         J9               62.31    36       10857    12       0                        
-S8               RainGage         J19              21.74    36       3788     12       0                        
-S9               RainGage         J18              20.38    36       3551     12       0                        
-S10              RainGage         O3               40.16    36       6997     12       0                        
-S11              RainGage         O3               30.14    36       5252     12       0                        
-S12              RainGage         O3               25.92    49       4516     12       0                        
-S13              RainGage         O3               14.81    49       2580     12       0                        
-S14              RainGage         O3               9.78     49       1704     3        0                        
-S15              RainGage         O3               13.58    66       2366     3        0                        
+S1               RainGage         J1               67.42    15       11747    20       0                        
+S2               RainGage         J11              24.87    18       4333     20       0                        
+S3               RainGage         J12              20.69    26       3605     20       0                        
+S4               RainGage         J13              38.40    26       6691     20       0                        
+S5               RainGage         J5               9.76     36       1701     20       0                        
+S6               RainGage         J9               34.30    36       5976     20       0                        
+S7               RainGage         J9               62.31    36       10857    20       0                        
+S8               RainGage         J19              21.74    36       3788     20       0                        
+S9               RainGage         J18              20.38    36       3551     20       0                        
+S10              RainGage         O3               40.16    36       6997     20       0                        
+S11              RainGage         O3               30.14    36       5252     20       0                        
+S12              RainGage         O3               25.92    49       4516     20       0                        
+S13              RainGage         O3               14.81    49       2580     20       0                        
+S14              RainGage         O3               9.78     49       1704     8        0                        
+S15              RainGage         O3               13.58    66       2366     4        0                        
 S16              RainGage         O3               11.30    66       1969     1        0                        
 S17              RainGage         J20              9.27     66       1615     1        0                        
 S18              RainGage         J21              14.11    66       2459     1        0                        
