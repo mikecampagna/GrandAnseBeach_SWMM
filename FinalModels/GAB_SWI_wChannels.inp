@@ -244,12 +244,12 @@ C23              J15              J8               862.75     0.01       0      
 ;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
 C1               TRAPEZOIDAL  2                4          1          1          1                    
 C5               TRAPEZOIDAL  2                4          1          1          1                    
-C7               RECT_OPEN    3                3          0          0          1                    
+C7               RECT_OPEN    2                3          0          0          1                    
 C8               TRAPEZOIDAL  2                4          1          1          1                    
 C9               TRAPEZOIDAL  2                4          1          1          1                    
 C10              TRAPEZOIDAL  2                4          1          1          1                    
 C11              TRAPEZOIDAL  2                4          1          1          1                    
-C12              RECT_OPEN    3                3          0          0          1                    
+C12              RECT_OPEN    2                3          0          0          1                    
 C13              TRAPEZOIDAL  2                4          1          1          1                    
 C14              TRAPEZOIDAL  2                4          1          1          1                    
 C15              TRAPEZOIDAL  2                4          1          1          1                    
@@ -259,7 +259,7 @@ C18              TRAPEZOIDAL  2                4          1          1          
 C19              TRAPEZOIDAL  2                4          1          1          1                    
 C20              TRAPEZOIDAL  2                4          1          1          1                    
 C21              TRAPEZOIDAL  2                4          1          1          1                    
-C22              RECT_OPEN    3                3          0          0          1                    
+C22              RECT_OPEN    2                3          0          0          1                    
 C23              TRAPEZOIDAL  2                4          1          1          1                    
 45               TRAPEZOIDAL  2                4          1          1          1                    
 46               TRAPEZOIDAL  2                4          1          1          1                    
