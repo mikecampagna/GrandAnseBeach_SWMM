@@ -24,7 +24,6 @@ REPORT_STEP          00:01:00
 WET_STEP             00:01:00
 DRY_STEP             01:00:00
 ROUTING_STEP         0:00:30 
-RULE_STEP            00:00:00
 
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  SLOPE
@@ -62,13 +61,13 @@ S6               RainGage         J9               34.30    36       5976     20
 S7               RainGage         J9               62.31    36       10857    20       0                        
 S8               RainGage         J19              21.74    36       3788     20       0                        
 S9               RainGage         J18              20.38    36       3551     20       0                        
-S10              RainGage         O3               40.16    36       6997     20       0                        
+S10              RainGage         42               40.16    36       6997     20       0                        
 S11              RainGage         O3               30.14    36       5252     20       0                        
 S12              RainGage         O3               25.92    49       4516     20       0                        
 S13              RainGage         O3               14.81    49       2580     20       0                        
 S14              RainGage         O3               9.78     49       1704     8        0                        
 S15              RainGage         O3               13.58    66       2366     4        0                        
-S16              RainGage         O3               11.30    66       1969     1        0                        
+S16              RainGage         43               11.30    66       1969     1        0                        
 S17              RainGage         J20              9.27     66       1615     1        0                        
 S18              RainGage         J21              14.11    66       2459     1        0                        
 S19              RainGage         O4               33.17    66       5780     1        0                        
@@ -190,13 +189,15 @@ J24              31         0          0          0          0
 J25              31         0          0          0          0         
 J26              31         0          0          0          0         
 J27              8          0          0          0          0         
+42               0          0          0          0          0         
+43               0          0          0          0          0         
 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To        
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
 O1               0          TIDAL      TidalBounds      NO                       
 O2               0          TIDAL      TidalBounds      NO                       
-O3               0          TIDAL      TidalBounds      NO                       
+O3               0          FREE                        NO                       
 O4               0          TIDAL      TidalBounds      NO                       
 
 [CONDUITS]
@@ -222,6 +223,8 @@ C18              J18              J20              969.59     0.01       0      
 50               J26              J4               410.33     0.012      0          0          0          0         
 51               J10              J27              1278.02    0.01       0          0          0          0         
 52               J27              J2               909.23     0.012      0          0          0          0         
+54               42               43               400        0.01       0          0          0          0         
+55               43               J20              400        0.01       0          0          0          0         
 
 [XSECTIONS]
 ;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
@@ -246,6 +249,8 @@ C18              TRAPEZOIDAL  2                4          1          1          
 50               TRAPEZOIDAL  2                4          1          1          1                    
 51               TRAPEZOIDAL  2                4          1          1          1                    
 52               TRAPEZOIDAL  2                4          1          1          1                    
+54               CIRCULAR     1                0          0          0          1                    
+55               CIRCULAR     1                0          0          0          1                    
 
 [INFLOWS]
 ;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
@@ -391,6 +396,8 @@ Tides                       0.75  0.7   0.65  0.68  0.7   0.75
 
 [REPORT]
 ;;Reporting Options
+INPUT      NO
+CONTROLS   NO
 SUBCATCHMENTS ALL
 NODES ALL
 LINKS ALL
@@ -424,9 +431,11 @@ J24              7878.276           2780.668
 J25              8678.932           2897.502          
 J26              9819.781           3199.896          
 J27              7263.436           3579.602          
+42               13315.295          7104.081          
+43               12587.199          7281.968          
 O1               5743.740           3983.553          
 O2               10801.229          6356.202          
-O3               11243.186          8139.007          
+O3               11457.823          8585.094          
 O4               9665.859           5728.851          
 
 [VERTICES]
@@ -441,6 +450,8 @@ C18              12387.158          6643.417
 48               8486.500           3086.498          
 51               7505.146           3627.308          
 52               6754.573           3506.453          
+55               12429.997          6967.563          
+55               12041.127          6802.087          
 
 [Polygons]
 ;;Subcatchment   X-Coord            Y-Coord           

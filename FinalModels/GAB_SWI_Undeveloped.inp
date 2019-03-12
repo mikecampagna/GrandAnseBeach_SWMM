@@ -24,7 +24,6 @@ REPORT_STEP          00:01:00
 WET_STEP             00:01:00
 DRY_STEP             01:00:00
 ROUTING_STEP         0:00:30 
-RULE_STEP            00:00:00
 
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  SLOPE
@@ -133,6 +132,16 @@ S21              12.1       0.214      4
 S22              12.1       0.214      4         
 S23              12.1       0.214      4         
 S24              12.1       0.214      4         
+
+[LID_CONTROLS]
+;;Name           Type/Layer Parameters
+;;-------------- ---------- ----------
+VS1              VS
+VS1              SURFACE    60         0.05       0.1        1.0        5         
+
+[LID_USAGE]
+;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo         
+;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ----------------
 
 [AQUIFERS]
 ;;Name           Por    WP     FC     Ksat   Kslope Tslope ETu    ETs    Seep   Ebot   Egw    Umc    ETupat 
@@ -292,6 +301,8 @@ Tides                       0.75  0.7   0.65  0.68  0.7   0.75
 
 [REPORT]
 ;;Reporting Options
+INPUT      NO
+CONTROLS   NO
 SUBCATCHMENTS ALL
 NODES ALL
 LINKS ALL

@@ -8,7 +8,7 @@ INFILTRATION         MODIFIED_GREEN_AMPT
 FLOW_ROUTING         DYNWAVE
 LINK_OFFSETS         DEPTH
 MIN_SLOPE            0
-ALLOW_PONDING        NO
+ALLOW_PONDING        YES
 SKIP_STEADY_STATE    NO
 
 START_DATE           01/01/2004
@@ -24,7 +24,6 @@ REPORT_STEP          00:01:00
 WET_STEP             00:01:00
 DRY_STEP             01:00:00
 ROUTING_STEP         0:00:30 
-RULE_STEP            00:00:00
 
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  SLOPE
@@ -134,6 +133,16 @@ S22              12.1       0.214      4
 S23              12.1       0.214      4         
 S24              12.1       0.214      4         
 
+[LID_CONTROLS]
+;;Name           Type/Layer Parameters
+;;-------------- ---------- ----------
+vs1              VS
+vs1              SURFACE    60         0.05       0.1        1.0        5         
+
+[LID_USAGE]
+;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo         
+;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ----------------
+
 [AQUIFERS]
 ;;Name           Por    WP     FC     Ksat   Kslope Tslope ETu    ETs    Seep   Ebot   Egw    Umc    ETupat 
 ;;-------------- ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
@@ -177,34 +186,34 @@ J4               12         0          0          0          0
 J5               20         0          0          0          0         
 J6               20         0          0          0          0         
 J7               18         0          0          0          0         
-J8               44         0          0          0          0         
+J8               44         0          0          0          100       
 J9               63         0          0          0          0         
 J10              10         0          0          0          0         
 J11              126        0          0          0          0         
 J12              126        0          0          0          0         
 J13              44         0          0          0          0         
 J14              67         0          0          0          0         
-J15              159        0          0          0          0         
-J16              41         0          0          0          0         
+J15              159        0          0          0          100       
+J16              41         0          0          0          100       
 J17              18         0          0          0          0         
 J18              208        0          0          0          0         
 J19              191        0          0          0          0         
 J20              26         0          0          0          0         
 J21              26         0          0          0          0         
-J22              109        0          0          0          0         
-J23              40         0          0          0          0         
+J22              109        0          0          0          100       
+J23              40         0          0          0          100       
 J24              31         0          0          0          0         
 J25              31         0          0          0          0         
 J26              31         0          0          0          0         
 J27              8          0          0          0          0         
-J28              191        0          0          0          0         
+J28              191        0          0          0          100       
 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To        
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
 O1               0          TIDAL      TidalBounds      NO                       
 O2               0          TIDAL      TidalBounds      NO                       
-O3               0          TIDAL      TidalBounds      NO                       
+O3               0          FREE                        NO                       
 O4               0          TIDAL      TidalBounds      NO                       
 
 [CONDUITS]
@@ -423,6 +432,8 @@ Tides                       0.75  0.7   0.65  0.68  0.7   0.75
 
 [REPORT]
 ;;Reporting Options
+INPUT      NO
+CONTROLS   NO
 SUBCATCHMENTS ALL
 NODES ALL
 LINKS ALL

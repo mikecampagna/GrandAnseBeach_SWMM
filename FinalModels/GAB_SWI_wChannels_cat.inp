@@ -24,7 +24,6 @@ REPORT_STEP          00:01:00
 WET_STEP             00:01:00
 DRY_STEP             01:00:00
 ROUTING_STEP         0:00:30 
-RULE_STEP            00:00:00
 
 INERTIAL_DAMPING     PARTIAL
 NORMAL_FLOW_LIMITED  SLOPE
@@ -423,6 +422,8 @@ Tides                       0.75  0.7   0.65  0.68  0.7   0.75
 
 [REPORT]
 ;;Reporting Options
+INPUT      NO
+CONTROLS   NO
 SUBCATCHMENTS ALL
 NODES ALL
 LINKS ALL
