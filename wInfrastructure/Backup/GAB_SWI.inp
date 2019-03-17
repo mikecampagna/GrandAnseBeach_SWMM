@@ -4,7 +4,7 @@
 [OPTIONS]
 ;;Option             Value
 FLOW_UNITS           CFS
-INFILTRATION         HORTON
+INFILTRATION         MODIFIED_GREEN_AMPT
 FLOW_ROUTING         DYNWAVE
 LINK_OFFSETS         DEPTH
 MIN_SLOPE            0
@@ -53,125 +53,159 @@ RainGage         INTENSITY 1:00     1.0      TIMESERIES SanJuan
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-S1               RainGage         J1               67.42    25       500      0.5      0                        
-S2               RainGage         J11              24.87    25       500      0.5      0                        
-S3               RainGage         J12              20.69    25       500      0.5      0                        
-S4               RainGage         J13              38.40    25       500      0.5      0                        
-S5               RainGage         J5               9.76     25       500      0.5      0                        
-S6               RainGage         J9               34.30    25       500      0.5      0                        
-S7               RainGage         J9               62.31    25       500      0.5      0                        
-S8               RainGage         J19              21.74    25       500      0.5      0                        
-S9               RainGage         J18              20.38    25       500      0.5      0                        
-S10              RainGage         J14              40.16    25       500      0.5      0                        
-S11              RainGage         J22              30.14    25       500      0.5      0                        
-S12              RainGage         J15              25.92    25       500      0.5      0                        
-S13              RainGage         42               14.81    25       500      0.5      0                        
-S14              RainGage         J16              9.78     25       500      0.5      0                        
-S15              RainGage         J23              13.58    25       500      0.5      0                        
-S16              RainGage         J7               11.30    25       500      0.5      0                        
-S17              RainGage         J20              9.27     25       500      0.5      0                        
-S18              RainGage         J21              14.11    25       500      0.5      0                        
-S19              RainGage         J6               33.17    25       500      0.5      0                        
-S20              RainGage         J5               42.19    25       500      0.5      0                        
-S21              RainGage         41               18.62    25       500      0.5      0                        
-S22              RainGage         J4               18.77    25       500      0.5      0                        
-S23              RainGage         J3               20.23    25       500      0.5      0                        
-S24              RainGage         J2               10.25    25       500      0.5      0                        
+S1               RainGage         J1               67.42    15       11747    12       0                        
+S2               RainGage         J11              24.87    18       4333     12       0                        
+S3               RainGage         J12              20.69    26       3605     12       0                        
+S4               RainGage         J13              38.40    26       6691     12       0                        
+S5               RainGage         J5               9.76     36       1701     12       0                        
+S6               RainGage         J9               34.30    36       5976     12       0                        
+S7               RainGage         J9               62.31    36       10857    12       0                        
+S8               RainGage         J19              21.74    36       3788     12       0                        
+S9               RainGage         J18              20.38    36       3551     12       0                        
+S10              RainGage         J14              40.16    36       6997     12       0                        
+S11              RainGage         J22              30.14    36       5252     12       0                        
+S12              RainGage         J15              25.92    49       4516     12       0                        
+S13              RainGage         J28              14.81    49       2580     12       0                        
+S14              RainGage         J16              9.78     49       1704     3        0                        
+S15              RainGage         J23              13.58    66       2366     3        0                        
+S16              RainGage         J7               11.30    66       1969     1        0                        
+S17              RainGage         J20              9.27     66       1615     1        0                        
+S18              RainGage         J21              14.11    66       2459     1        0                        
+S19              RainGage         O4               33.17    66       5780     1        0                        
+S20              RainGage         O4               42.19    85       7351     1        0                        
+S21              RainGage         J27              18.62    85       3244     1        0                        
+S22              RainGage         J4               18.77    68       3270     1        0                        
+S23              RainGage         J3               20.23    68       3525     1        0                        
+S24              RainGage         J2               10.25    85       1786     1        0                        
 
 [SUBAREAS]
 ;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
 ;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
-S1               0.01       0.1        0.05       0.05       25         OUTLET    
-S2               0.01       0.1        0.05       0.05       25         OUTLET    
-S3               0.01       0.1        0.05       0.05       25         OUTLET    
-S4               0.01       0.1        0.05       0.05       25         OUTLET    
-S5               0.01       0.1        0.05       0.05       25         OUTLET    
-S6               0.01       0.1        0.05       0.05       25         OUTLET    
-S7               0.01       0.1        0.05       0.05       25         OUTLET    
-S8               0.01       0.1        0.05       0.05       25         OUTLET    
-S9               0.01       0.1        0.05       0.05       25         OUTLET    
-S10              0.01       0.1        0.05       0.05       25         OUTLET    
-S11              0.01       0.1        0.05       0.05       25         OUTLET    
-S12              0.01       0.1        0.05       0.05       25         OUTLET    
-S13              0.01       0.1        0.05       0.05       25         OUTLET    
-S14              0.01       0.1        0.05       0.05       25         OUTLET    
-S15              0.01       0.1        0.05       0.05       25         OUTLET    
-S16              0.01       0.1        0.05       0.05       25         OUTLET    
-S17              0.01       0.1        0.05       0.05       25         OUTLET    
-S18              0.01       0.1        0.05       0.05       25         OUTLET    
-S19              0.01       0.1        0.05       0.05       25         OUTLET    
-S20              0.01       0.1        0.05       0.05       25         OUTLET    
-S21              0.01       0.1        0.05       0.05       25         OUTLET    
-S22              0.01       0.1        0.05       0.05       25         OUTLET    
-S23              0.01       0.1        0.05       0.05       25         OUTLET    
-S24              0.01       0.1        0.05       0.05       25         OUTLET    
+S1               0.013      0.41       0.1        0.06       25         OUTLET    
+S2               0.013      0.41       0.1        0.06       25         OUTLET    
+S3               0.013      0.41       0.1        0.06       25         OUTLET    
+S4               0.013      0.41       0.1        0.06       25         OUTLET    
+S5               0.013      0.41       0.1        0.06       25         OUTLET    
+S6               0.013      0.41       0.1        0.06       25         OUTLET    
+S7               0.013      0.41       0.1        0.06       25         OUTLET    
+S8               0.013      0.41       0.1        0.06       25         OUTLET    
+S9               0.013      0.41       0.1        0.06       25         OUTLET    
+S10              0.013      0.41       0.1        0.06       25         OUTLET    
+S11              0.013      0.41       0.1        0.06       25         OUTLET    
+S12              0.013      0.41       0.1        0.06       25         OUTLET    
+S13              0.013      0.41       0.1        0.06       25         OUTLET    
+S14              0.013      0.41       0.1        0.06       25         OUTLET    
+S15              0.013      0.41       0.1        0.06       25         OUTLET    
+S16              0.013      0.41       0.1        0.06       25         OUTLET    
+S17              0.013      0.41       0.1        0.06       25         OUTLET    
+S18              0.013      0.41       0.1        0.06       25         OUTLET    
+S19              0.013      0.41       0.1        0.06       25         OUTLET    
+S20              0.013      0.41       0.1        0.06       25         OUTLET    
+S21              0.013      0.41       0.1        0.06       25         OUTLET    
+S22              0.013      0.41       0.1        0.06       25         OUTLET    
+S23              0.013      0.41       0.1        0.06       25         OUTLET    
+S24              0.013      0.41       0.1        0.06       25         OUTLET    
 
 [INFILTRATION]
-;;Subcatchment   MaxRate    MinRate    Decay      DryTime    MaxInfil  
-;;-------------- ---------- ---------- ---------- ---------- ----------
-S1               3.0        0.5        4          7          0         
-S2               3.0        0.5        4          7          0         
-S3               3.0        0.5        4          7          0         
-S4               3.0        0.5        4          7          0         
-S5               3.0        0.5        4          7          0         
-S6               3.0        0.5        4          7          0         
-S7               3.0        0.5        4          7          0         
-S8               3.0        0.5        4          7          0         
-S9               3.0        0.5        4          7          0         
-S10              3.0        0.5        4          7          0         
-S11              3.0        0.5        4          7          0         
-S12              3.0        0.5        4          7          0         
-S13              3.0        0.5        4          7          0         
-S14              3.0        0.5        4          7          0         
-S15              3.0        0.5        4          7          0         
-S16              3.0        0.5        4          7          0         
-S17              3.0        0.5        4          7          0         
-S18              3.0        0.5        4          7          0         
-S19              3.0        0.5        4          7          0         
-S20              3.0        0.5        4          7          0         
-S21              3.0        0.5        4          7          0         
-S22              3.0        0.5        4          7          0         
-S23              3.0        0.5        4          7          0         
-S24              3.0        0.5        4          7          0         
+;;Subcatchment   Suction    Ksat       IMD       
+;;-------------- ---------- ---------- ----------
+S1               10.8       0.0375     4         
+S2               10.8       0.0289     4         
+S3               10.8       0.0289     4         
+S4               10.8       0.0289     4         
+S5               11         0.0331     4         
+S6               11         0.0331     4         
+S7               11         0.0331     4         
+S8               11         0.0331     4         
+S9               11         0.0331     4         
+S10              11         0.0331     4         
+S11              11         0.0331     4         
+S12              10.6       0.04       4         
+S13              10.6       0.04       4         
+S14              10.6       0.04       4         
+S15              11.3       0.318      4         
+S16              11.4       0.318      4         
+S17              11.4       0.318      4         
+S18              11.3       0.318      4         
+S19              11.3       0.318      4         
+S20              12.1       0.214      4         
+S21              12.1       0.214      4         
+S22              12.1       0.214      4         
+S23              12.1       0.214      4         
+S24              12.1       0.214      4         
+
+[AQUIFERS]
+;;Name           Por    WP     FC     Ksat   Kslope Tslope ETu    ETs    Seep   Ebot   Egw    Umc    ETupat 
+;;-------------- ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
+Aquifer1         0.465  0.21   0.328  0.101  10.0   15.0   0.35   14.0   0.002  -10    2.74   0.30         
+
+[GROUNDWATER]
+;;Subcatchment   Aquifer          Node             Esurf  A1     B1     A2     B2     A3     Dsw    Egwt   Ebot   Wgr    Umc   
+;;-------------- ---------------- ---------------- ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
+S1               Aquifer1         J1               127    0.5    1.0    0      0      0      0      *     
+S2               Aquifer1         J24              127    0.5    1.0    0      0      0      0      *     
+S3               Aquifer1         J25              127    0.5    1.0    0      0      0      0      *     
+S4               Aquifer1         J26              127    0.5    1.0    0      0      0      0      *     
+S5               Aquifer1         J5               127    0.5    1.0    0      0      0      0      *     
+S6               Aquifer1         J9               127    0.5    1.0    0      0      0      0      *     
+S7               Aquifer1         J9               127    0.5    1.0    0      0      0      0      *     
+S8               Aquifer1         J19              127    0.5    1.0    0      0      0      0      *     
+S9               Aquifer1         J18              127    0.5    1.0    0      0      0      0      *     
+S10              Aquifer1         J14              127    0.5    1.0    0      0      0      0      *     
+S11              Aquifer1         J22              127    0.5    1.0    0      0      0      0      *     
+S12              Aquifer1         J15              127    0.5    1.0    0      0      0      0      *     
+S13              Aquifer1         J28              127    0.5    1.0    0      0      0      0      *     
+S14              Aquifer1         J16              12     0.5    1.0    0      0      0      0      *     
+S15              Aquifer1         J8               4      0.5    1.0    0      0      0      0      *     
+S16              Aquifer1         J7               4      0.5    1.0    0      0      0      0      *     
+S17              Aquifer1         J20              4      0.5    1.0    0      0      0      0      *     
+S18              Aquifer1         J21              4      0.5    1.0    0      0      0      0      *     
+S19              Aquifer1         J17              4      0.5    1.0    0      0      0      0      *     
+S20              Aquifer1         J10              4      0.5    1.0    0      0      0      0      *     
+S21              Aquifer1         J27              4      0.5    1.0    0      0      0      0      *     
+S22              Aquifer1         J4               7      0.5    1.0    0      0      0      0      *     
+S23              Aquifer1         J3               7      0.5    1.0    0      0      0      0      *     
+S24              Aquifer1         J2               16     0.5    1.0    0      0      0      0      *     
 
 [JUNCTIONS]
 ;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-J1               22         0          0          0          0         
-J2               3          0          0          0          0         
-J3               4          0          0          0          0         
-J4               4          0          0          0          0         
-J5               5          0          0          0          0         
-J6               4          0          0          0          0         
-J7               4          0          0          0          0         
-J8               10         0          0          0          0         
-J9               16         0          0          0          0         
-J10              4          0          0          0          0         
-J11              35         0          0          0          0         
-J12              35         0          0          0          0         
-J13              10         0          0          0          0         
-J14              17         0          0          0          0         
-J15              45         0          0          0          0         
-J16              9          0          0          0          0         
-J17              3          0          0          0          0         
-J18              60         0          0          0          0         
-J19              55         0          0          0          0         
-J20              4          0          0          0          0         
-J21              4          0          0          0          0         
-J22              30         0          0          0          0         
-J23              11         0          0          0          0         
-38               6          0          0          0          0         
-39               6          0          0          0          0         
-40               6          0          0          0          0         
-41               3          0          0          0          0         
-42               55         0          0          0          0         
+J1               83         0          0          0          0         
+J2               12         0          0          0          0         
+J3               12         0          0          0          0         
+J4               12         0          0          0          0         
+J5               20         0          0          0          0         
+J6               20         0          0          0          0         
+J7               18         0          0          0          0         
+J8               44         0          0          0          0         
+J9               63         0          0          0          0         
+J10              10         0          0          0          0         
+J11              126        0          0          0          0         
+J12              126        0          0          0          0         
+J13              44         0          0          0          0         
+J14              67         0          0          0          0         
+J15              159        0          0          0          0         
+J16              41         0          0          0          0         
+J17              18         0          0          0          0         
+J18              208        0          0          0          0         
+J19              191        0          0          0          0         
+J20              26         0          0          0          0         
+J21              26         0          0          0          0         
+J22              109        0          0          0          0         
+J23              40         0          0          0          0         
+J24              31         0          0          0          0         
+J25              31         0          0          0          0         
+J26              31         0          0          0          0         
+J27              8          0          0          0          0         
+J28              191        0          0          0          0         
 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To        
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
-O1               0          FREE                        NO                       
-O2               0          FREE                        NO                       
-O3               0          FREE                        NO                       
+O1               0          TIDAL      TidalBounds      NO                       
+O2               0          TIDAL      TidalBounds      NO                       
+O3               0          TIDAL      TidalBounds      NO                       
+O4               0          TIDAL      TidalBounds      NO                       
 
 [CONDUITS]
 ;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
@@ -183,9 +217,9 @@ C8               J4               J3               1571.00    0.012      0      
 C9               J3               J2               1577.74    0.012      0          0          0          0         
 C10              J6               J17              796.48     0.01       0          0          0          0         
 C11              J9               J17              1378.18    0.01       0          0          0          0         
-C12              J17              O2               1465.57    0.01       0          0          0          0         
+C12              J17              O2               1465.58    0.01       0          0          0          0         
 C13              J14              J7               717.90     0.01       0          0          0          0         
-C14              J7               J20              751.02     0.01       0          0          0          0         
+C14              J7               J20              751.03     0.01       0          0          0          0         
 C15              J20              J21              1057.85    0.01       0          0          0          0         
 C16              J21              J17              814.08     0.01       0          0          0          0         
 C17              J19              J21              703.31     0.01       0          0          0          0         
@@ -195,47 +229,107 @@ C20              J23              J8               804.87     0.01       0      
 C21              J8               J16              534.20     0.01       0          0          0          0         
 C22              J16              O3               1070.18    0.01       0          0          0          0         
 C23              J15              J8               862.75     0.01       0          0          0          0         
-45               J11              38               377.01     0.012      0          0          0          0         
-46               38               J3               387.37     0.01       0          0          0          0         
-47               J12              39               392.05     0.01       0          0          0          0         
-48               39               J3               715.25     0.01       0          0          0          0         
-49               J13              40               567.65     0.012      0          0          0          0         
-50               40               J4               410.33     0.012      0          0          0          0         
-51               J10              41               1278.02    0.01       0          0          0          0         
-52               41               J2               909.23     0.012      0          0          0          0         
-53               42               J16              615.95     0.01       0          0          0          0         
+45               J11              J24              377.01     0.012      0          0          0          0         
+46               J24              J3               387.37     0.01       0          0          0          0         
+47               J12              J25              392.05     0.01       0          0          0          0         
+48               J25              J3               715.25     0.01       0          0          0          0         
+49               J13              J26              567.65     0.012      0          0          0          0         
+50               J26              J4               410.33     0.012      0          0          0          0         
+51               J10              J27              1278.02    0.01       0          0          0          0         
+52               J27              J2               909.23     0.012      0          0          0          0         
+53               J28              J16              615.95     0.01       0          0          0          0         
 
 [XSECTIONS]
 ;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
 ;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
-C1               TRAPEZOIDAL  3                4          1          1          1                    
-C5               TRAPEZOIDAL  3                4          1          1          1                    
-C7               CIRCULAR     3                0          0          0          1                    
-C8               TRAPEZOIDAL  3                4          1          1          1                    
-C9               TRAPEZOIDAL  3                4          1          1          1                    
-C10              TRAPEZOIDAL  3                4          1          1          1                    
-C11              TRAPEZOIDAL  3                4          1          1          1                    
-C12              CIRCULAR     3                0          0          0          1                    
-C13              TRAPEZOIDAL  3                4          1          1          1                    
-C14              TRAPEZOIDAL  3                4          1          1          1                    
-C15              TRAPEZOIDAL  3                4          1          1          1                    
-C16              TRAPEZOIDAL  3                4          1          1          1                    
-C17              TRAPEZOIDAL  3                4          1          1          1                    
-C18              TRAPEZOIDAL  3                4          1          1          1                    
-C19              TRAPEZOIDAL  3                4          1          1          1                    
-C20              TRAPEZOIDAL  3                4          1          1          1                    
-C21              TRAPEZOIDAL  3                4          1          1          1                    
-C22              CIRCULAR     3                0          0          0          1                    
-C23              TRAPEZOIDAL  3                4          1          1          1                    
-45               TRAPEZOIDAL  3                4          1          1          1                    
-46               TRAPEZOIDAL  3                4          1          1          1                    
-47               CIRCULAR     1                0          0          0          1                    
-48               CIRCULAR     1                0          0          0          1                    
-49               TRAPEZOIDAL  3                4          1          1          1                    
-50               TRAPEZOIDAL  3                4          1          1          1                    
-51               TRAPEZOIDAL  3                4          1          1          1                    
-52               TRAPEZOIDAL  3                4          1          1          1                    
-53               TRAPEZOIDAL  3                4          1          1          1                    
+C1               TRAPEZOIDAL  2                4          1          1          1                    
+C5               TRAPEZOIDAL  2                4          1          1          1                    
+C7               RECT_OPEN    3                3          0          0          1                    
+C8               TRAPEZOIDAL  2                4          1          1          1                    
+C9               TRAPEZOIDAL  2                4          1          1          1                    
+C10              TRAPEZOIDAL  2                4          1          1          1                    
+C11              TRAPEZOIDAL  2                4          1          1          1                    
+C12              RECT_OPEN    3                3          0          0          1                    
+C13              TRAPEZOIDAL  2                4          1          1          1                    
+C14              TRAPEZOIDAL  2                4          1          1          1                    
+C15              TRAPEZOIDAL  2                4          1          1          1                    
+C16              TRAPEZOIDAL  2                4          1          1          1                    
+C17              TRAPEZOIDAL  2                4          1          1          1                    
+C18              TRAPEZOIDAL  2                4          1          1          1                    
+C19              TRAPEZOIDAL  2                4          1          1          1                    
+C20              TRAPEZOIDAL  2                4          1          1          1                    
+C21              TRAPEZOIDAL  2                4          1          1          1                    
+C22              RECT_OPEN    3                3          0          0          1                    
+C23              TRAPEZOIDAL  2                4          1          1          1                    
+45               TRAPEZOIDAL  2                4          1          1          1                    
+46               TRAPEZOIDAL  2                4          1          1          1                    
+47               TRAPEZOIDAL  2                4          1          1          1                    
+48               TRAPEZOIDAL  2                4          1          1          1                    
+49               TRAPEZOIDAL  2                4          1          1          1                    
+50               TRAPEZOIDAL  2                4          1          1          1                    
+51               TRAPEZOIDAL  2                4          1          1          1                    
+52               TRAPEZOIDAL  2                4          1          1          1                    
+53               TRAPEZOIDAL  2                4          1          1          1                    
+
+[INFLOWS]
+;;Node           Constituent      Time Series      Type     Mfactor  Sfactor  Baseline Pattern
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- --------
+J1               FLOW             ""               FLOW     1.0      1.0      0.00    
+J2               FLOW             ""               FLOW     1.0      1.0      0.02    
+J3               FLOW             ""               FLOW     1.0      1.0      0.02    
+J4               FLOW             ""               FLOW     1.0      1.0      0.02    
+J5               FLOW             ""               FLOW     1.0      1.0      0.02    
+J6               FLOW             ""               FLOW     1.0      1.0      0.02    
+J7               FLOW             ""               FLOW     1.0      1.0      0.02    
+J8               FLOW             ""               FLOW     1.0      1.0      0.00    
+J9               FLOW             ""               FLOW     1.0      1.0      0.00    
+J10              FLOW             ""               FLOW     1.0      1.0      0.02    
+J11              FLOW             ""               FLOW     1.0      1.0      0.00    
+J12              FLOW             ""               FLOW     1.0      1.0      0.00    
+J13              FLOW             ""               FLOW     1.0      1.0      0.00    
+J14              FLOW             ""               FLOW     1.0      1.0      0.00    
+J15              FLOW             ""               FLOW     1.0      1.0      0.00    
+J16              FLOW             ""               FLOW     1.0      1.0      0.02    
+J17              FLOW             ""               FLOW     1.0      1.0      0.02    
+J18              FLOW             ""               FLOW     1.0      1.0      0.00    
+J19              FLOW             ""               FLOW     1.0      1.0      0.00    
+J20              FLOW             ""               FLOW     1.0      1.0      0.02    
+J21              FLOW             ""               FLOW     1.0      1.0      0.02    
+J22              FLOW             ""               FLOW     1.0      1.0      0.00    
+J23              FLOW             ""               FLOW     1.0      1.0      0.02    
+J24              FLOW             ""               FLOW     1.0      1.0      0.02    
+J25              FLOW             ""               FLOW     1.0      1.0      0.02    
+J26              FLOW             ""               FLOW     1.0      1.0      0.02    
+J27              FLOW             ""               FLOW     1.0      1.0      0.02    
+J28              FLOW             ""               FLOW     1.0      1.0      0.00    
+
+[CURVES]
+;;Name           Type       X-Value    Y-Value   
+;;-------------- ---------- ---------- ----------
+TidalBounds      Tidal      0          0.24384   
+TidalBounds                 1          0.25908   
+TidalBounds                 2          0.249936  
+TidalBounds                 3          0.24384   
+TidalBounds                 4          0.237744  
+TidalBounds                 5          0.24384   
+TidalBounds                 6          0.249936  
+TidalBounds                 7          0.25908   
+TidalBounds                 8          0.265176  
+TidalBounds                 9          0.268224  
+TidalBounds                 10         0.27432   
+TidalBounds                 11         0.3048    
+TidalBounds                 12         0.32004   
+TidalBounds                 13         0.310896  
+TidalBounds                 14         0.3048    
+TidalBounds                 15         0.27432   
+TidalBounds                 16         0.25908   
+TidalBounds                 17         0.24384   
+TidalBounds                 18         0.2286    
+TidalBounds                 19         0.21336   
+TidalBounds                 20         0.19812   
+TidalBounds                 21         0.207264  
+TidalBounds                 22         0.21336   
+TidalBounds                 23         0.2286    
 
 [TIMESERIES]
 ;;Name           Date       Time       Value     
@@ -315,9 +409,17 @@ C23              TRAPEZOIDAL  3                4          1          1          
 50-yr                       1:50       0.6       
 50-yr                       1:55       0.6       
 ;
-PHL              FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+PHL              FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
 ;
-SanJuan          FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
+SanJuan          FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
+
+[PATTERNS]
+;;Name           Type       Multipliers
+;;-------------- ---------- -----------
+Tides            HOURLY     0.8   0.85  0.82  0.8   0.78  0.8  
+Tides                       0.82  0.85  0.87  0.88  0.9   1    
+Tides                       1.05  1.02  1     0.9   0.85  0.8  
+Tides                       0.75  0.7   0.65  0.68  0.7   0.75 
 
 [REPORT]
 ;;Reporting Options
@@ -357,14 +459,15 @@ J20              11962.578          6705.855
 J21              11662.875          5756.796          
 J22              13573.482          7854.717          
 J23              12819.443          7844.246          
-38               7878.276           2780.668          
-39               8678.932           2897.502          
-40               9819.781           3199.896          
-41               7263.436           3579.602          
-42               12612.863          9301.136          
+J24              7878.276           2780.668          
+J25              8678.932           2897.502          
+J26              9819.781           3199.896          
+J27              7263.436           3579.602          
+J28              12612.863          9301.136          
 O1               5743.740           3983.553          
 O2               10801.229          6356.202          
 O3               11250.784          9528.059          
+O4               9665.859           5728.851          
 
 [VERTICES]
 ;;Link           X-Coord            Y-Coord           
@@ -883,5 +986,5 @@ RainGage         12349.695          2859.666
 
 
 [BACKDROP]
-FILE       "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach.jpg"
+FILE       "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
 DIMENSIONS 0.000 0.000 16732.284 10826.772
