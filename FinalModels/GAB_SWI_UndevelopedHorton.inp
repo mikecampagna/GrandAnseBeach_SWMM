@@ -53,30 +53,30 @@ RainGage         INTENSITY 1:00     1.0      TIMESERIES SanJuan
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-S1               RainGage         O1               67.42    0        11747    20       0                        
-S2               RainGage         O1               24.87    0        4333     20       0                        
-S3               RainGage         O1               20.69    0        3605     20       0                        
-S4               RainGage         O1               38.40    0        6691     20       0                        
-S5               RainGage         O1               9.76     0        1701     20       0                        
-S6               RainGage         O1               34.30    0        5976     20       0                        
-S7               RainGage         O1               62.31    0        10857    20       0                        
-S8               RainGage         O1               21.74    0        3788     20       0                        
-S9               RainGage         O1               20.38    0        3551     20       0                        
-S10              RainGage         O1               40.16    0        6997     20       0                        
-S11              RainGage         O1               30.14    0        5252     20       0                        
-S12              RainGage         O1               25.92    0        4516     20       0                        
-S13              RainGage         O1               14.81    0        2580     20       0                        
-S14              RainGage         O1               9.78     0        1704     8        0                        
-S15              RainGage         O1               13.58    0        2366     4        0                        
-S16              RainGage         O1               11.30    0        1969     1        0                        
-S17              RainGage         O1               9.27     0        1615     1        0                        
-S18              RainGage         O1               14.11    0        2459     1        0                        
-S19              RainGage         O1               33.17    0        5780     1        0                        
-S20              RainGage         O1               42.19    0        7351     1        0                        
-S21              RainGage         O1               18.62    0        3244     1        0                        
-S22              RainGage         O1               18.77    0        3270     1        0                        
-S23              RainGage         O1               20.23    0        3525     1        0                        
-S24              RainGage         O1               10.25    0        1786     1        0                        
+S1               RainGage         O4               67.42    0        5874     20       0                        
+S2               RainGage         O4               24.87    0        2167     20       0                        
+S3               RainGage         O4               20.69    0        1803     20       0                        
+S4               RainGage         O4               38.40    0        3345     20       0                        
+S5               RainGage         O4               9.76     0        850      20       0                        
+S6               RainGage         O2               34.30    0        2988     20       0                        
+S7               RainGage         O2               62.31    0        5428     20       0                        
+S8               RainGage         O2               21.74    0        1894     20       0                        
+S9               RainGage         O2               20.38    0        1776     20       0                        
+S10              RainGage         O2               40.16    0        3499     20       0                        
+S11              RainGage         O3               30.14    0        2626     20       0                        
+S12              RainGage         O3               25.92    0        2258     20       0                        
+S13              RainGage         O3               14.81    0        1290     20       0                        
+S14              RainGage         O3               9.78     0        852      8        0                        
+S15              RainGage         O5               13.58    0        1183     4        0                        
+S16              RainGage         O5               11.30    0        984      1        0                        
+S17              RainGage         O2               9.27     0        808      1        0                        
+S18              RainGage         O2               14.11    0        1229     1        0                        
+S19              RainGage         O1               33.17    0        2890     1        0                        
+S20              RainGage         O1               42.19    0        3676     1        0                        
+S21              RainGage         O4               18.62    0        1622     1        0                        
+S22              RainGage         O4               18.77    0        1635     1        0                        
+S23              RainGage         O4               20.23    0        1762     1        0                        
+S24              RainGage         O4               10.25    0        893      1        0                        
 
 [SUBAREAS]
 ;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
@@ -109,68 +109,49 @@ S24              0.013      0.41       0.1        0.06       25         OUTLET
 [INFILTRATION]
 ;;Subcatchment   MaxRate    MinRate    Decay      DryTime    MaxInfil  
 ;;-------------- ---------- ---------- ---------- ---------- ----------
-S1               2.38       0.09       4          7          0         
-S2               2.38       0.09       4          7          0         
-S3               2.38       0.09       4          7          0         
-S4               2.38       0.09       4          7          0         
-S5               2.38       0.09       4          7          0         
-S6               2.38       0.09       4          7          0         
-S7               2.38       0.09       4          7          0         
-S8               2.38       0.09       4          7          0         
-S9               2.38       0.09       4          7          0         
-S10              2.38       0.09       4          7          0         
-S11              2.38       0.09       4          7          0         
-S12              2.38       0.09       4          7          0         
-S13              2.38       0.09       4          7          0         
-S14              2.38       0.09       4          7          0         
-S15              2.38       0.09       4          7          0         
-S16              2.38       0.09       4          7          0         
-S17              2.38       0.09       4          7          0         
-S18              2.38       0.09       4          7          0         
-S19              2.38       0.09       4          7          0         
-S20              2.38       0.09       4          7          0         
-S21              2.38       0.09       4          7          0         
-S22              2.38       0.09       4          7          0         
-S23              2.38       0.09       4          7          0         
-S24              2.38       0.09       4          7          0         
+S1               2.83       0.0375     4          7          0         
+S2               2.83       0.0375     4          7          0         
+S3               2.25       0.029      4          7          0         
+S4               2.25       0.029      4          7          0         
+S5               2.25       0.029      4          7          0         
+S6               1.84       0.32       4          7          0         
+S7               1.84       0.32       4          7          0         
+S8               1.84       0.32       4          7          0         
+S9               1.84       0.32       4          7          0         
+S10              1.84       0.32       4          7          0         
+S11              1.84       0.32       4          7          0         
+S12              3.00       0.04       4          7          0         
+S13              3.00       0.04       4          7          0         
+S14              3.00       0.04       4          7          0         
+S15              2.54       0.034      4          7          0         
+S16              2.54       0.034      4          7          0         
+S17              2.54       0.034      4          7          0         
+S18              2.54       0.034      4          7          0         
+S19              2.54       0.034      4          7          0         
+S20              1.18       0.214      4          7          0         
+S21              1.18       0.214      4          7          0         
+S22              1.18       0.214      4          7          0         
+S23              1.18       0.214      4          7          0         
+S24              1.18       0.214      4          7          0         
 
-[AQUIFERS]
-;;Name           Por    WP     FC     Ksat   Kslope Tslope ETu    ETs    Seep   Ebot   Egw    Umc    ETupat 
-;;-------------- ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
-Aquifer1         0.465  0.21   0.328  0.101  10.0   15.0   0.35   14.0   0.002  -10    2.74   0.30         
+[LID_CONTROLS]
+;;Name           Type/Layer Parameters
+;;-------------- ---------- ----------
+VS1              VS
+VS1              SURFACE    60         0.05       0.1        1.0        5         
 
-[GROUNDWATER]
-;;Subcatchment   Aquifer          Node             Esurf  A1     B1     A2     B2     A3     Dsw    Egwt   Ebot   Wgr    Umc   
-;;-------------- ---------------- ---------------- ------ ------ ------ ------ ------ ------ ------ ------ ------ ------ ------
-S1               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S2               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S3               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S4               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S5               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S6               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S7               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S8               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S9               Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S10              Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S11              Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S12              Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S13              Aquifer1         O1               127    0.5    1.0    0      0      0      0      *     
-S14              Aquifer1         O1               12     0.5    1.0    0      0      0      0      *     
-S15              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S16              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S17              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S18              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S19              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S20              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S21              Aquifer1         O1               4      0.5    1.0    0      0      0      0      *     
-S22              Aquifer1         O1               7      0.5    1.0    0      0      0      0      *     
-S23              Aquifer1         O1               7      0.5    1.0    0      0      0      0      *     
-S24              Aquifer1         O1               16     0.5    1.0    0      0      0      0      *     
+[LID_USAGE]
+;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo          FromPerv  
+;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ---------------- ----------
 
 [OUTFALLS]
 ;;Name           Elevation  Type       Stage Data       Gated    Route To        
 ;;-------------- ---------- ---------- ---------------- -------- ----------------
 O1               0          TIDAL      TidalBounds      NO                       
+O2               0          TIDAL      TidalBounds      NO                       
+O3               0          TIDAL      TidalBounds      NO                       
+O4               0          TIDAL      TidalBounds      NO                       
+O5               0          TIDAL      TidalBounds      NO                       
 
 [CURVES]
 ;;Name           Type       X-Value    Y-Value   
@@ -278,9 +259,9 @@ TidalBounds                 23         0.2286
 50-yr                       1:50       0.6       
 50-yr                       1:55       0.6       
 ;
-PHL              FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+PHL              FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
 ;
-SanJuan          FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
+SanJuan          FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
 
 [PATTERNS]
 ;;Name           Type       Multipliers
@@ -305,7 +286,11 @@ Units      Feet
 [COORDINATES]
 ;;Node           X-Coord            Y-Coord           
 ;;-------------- ------------------ ------------------
-O1               9502.516           6506.053          
+O1               9665.859           5728.851          
+O2               11055.980          6276.573          
+O3               11351.419          9249.413          
+O4               6410.165           3968.213          
+O5               11605.104          7898.553          
 
 [VERTICES]
 ;;Link           X-Coord            Y-Coord           
@@ -810,5 +795,5 @@ RainGage         12349.695          2859.666
 
 
 [BACKDROP]
-FILE       "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
+FILE       "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
 DIMENSIONS 0.000 0.000 16732.284 10826.772
