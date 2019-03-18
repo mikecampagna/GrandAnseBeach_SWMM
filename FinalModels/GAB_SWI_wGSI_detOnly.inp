@@ -426,9 +426,9 @@ TidalBounds                 23         0.2286
 50-yr                       1:50       0.6       
 50-yr                       1:55       0.6       
 ;
-PHL              FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+PHL              FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
 ;
-SanJuan          FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
+SanJuan          FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
 
 [PATTERNS]
 ;;Name           Type       Multipliers
@@ -1009,5 +1009,5 @@ RainGage         12349.695          2859.666
 
 
 [BACKDROP]
-FILE       "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
+FILE       "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
 DIMENSIONS 0.000 0.000 16732.284 10826.772

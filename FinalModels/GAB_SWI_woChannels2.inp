@@ -73,9 +73,9 @@ S17              RainGage         J20              9.27     66       1615     1 
 S18              RainGage         J21              14.11    66       2459     1        0                        
 S19              RainGage         O4               33.17    66       5780     1        0                        
 S20              RainGage         O4               42.19    85       7351     1        0                        
-S21              RainGage         J27              18.62    85       3244     1        0                        
-S22              RainGage         J10              18.77    68       3270     1        0                        
-S23              RainGage         J27              20.23    68       3525     1        0                        
+S21              RainGage         O6               18.62    85       3244     1        0                        
+S22              RainGage         J5               18.77    68       3270     1        0                        
+S23              RainGage         J10              20.23    68       3525     1        0                        
 S24              RainGage         J2               10.25    85       1786     1        0                        
 
 [SUBAREAS]
@@ -212,6 +212,7 @@ O2               0          TIDAL      TidalBounds      NO
 O3               0          TIDAL      TidalBounds      NO                       
 O4               0          TIDAL      TidalBounds      NO                       
 O5               0          TIDAL      TidalBounds      NO                       
+O6               0          TIDAL      TidalBounds      NO                       
 
 [CONDUITS]
 ;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
@@ -391,9 +392,9 @@ TidalBounds                 23         0.2286
 50-yr                       1:50       0.6       
 50-yr                       1:55       0.6       
 ;
-PHL              FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+PHL              FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\Philly_QCLCD_hrly_2014Prc_Modified.dat"
 ;
-SanJuan          FILE "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
+SanJuan          FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\ModelsData\RainData\SanJuan.dat"
 
 [PATTERNS]
 ;;Name           Type       Multipliers
@@ -443,6 +444,7 @@ O2               11055.980          6276.573
 O3               11351.419          9249.413          
 O4               9665.859           5728.851          
 O5               11605.104          7898.553          
+O6               7317.181           4245.793          
 
 [VERTICES]
 ;;Link           X-Coord            Y-Coord           
@@ -959,5 +961,5 @@ RainGage         12349.695          2859.666
 
 
 [BACKDROP]
-FILE       "C:\Users\gotmi\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
+FILE       "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\BackDrops\Grand Anse Beach 2.jpg"
 DIMENSIONS 0.000 0.000 16732.284 10826.772
