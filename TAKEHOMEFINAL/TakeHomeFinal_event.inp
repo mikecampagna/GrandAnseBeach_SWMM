@@ -15,8 +15,8 @@ START_DATE           01/01/2014
 START_TIME           00:00:00
 REPORT_START_DATE    01/01/2014
 REPORT_START_TIME    00:00:00
-END_DATE             12/31/2014
-END_TIME             23:00:00
+END_DATE             01/01/2014
+END_TIME             06:00:00
 SWEEP_START          01/01
 SWEEP_END            12/31
 DRY_DAYS             0
@@ -48,7 +48,7 @@ DRY_ONLY         NO
 [RAINGAGES]
 ;;Name           Format    Interval SCF      Source    
 ;;-------------- --------- ------ ------ ----------
-R1               INTENSITY 1:00     1.0      TIMESERIES PHL             
+R1               INTENSITY 0:05     1.0      TIMESERIES 10yr2hr         
 
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
