@@ -53,9 +53,9 @@ R1               INTENSITY 1:00     1.0      TIMESERIES PHL
 [SUBCATCHMENTS]
 ;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
 ;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
-H1               R1               J1               2.17     89.1     1050.3   1.0      0                        
-H2               R1               J2               2.08     89.1     1006.7   1.0      0                        
-H3               R1               O1               2.27     89.1     1098.7   1.0      0                        
+H1               R1               J1               2.17     80.7     1050.3   1.0      0                        
+H2               R1               J2               2.08     80.7     1006.7   1.0      0                        
+H3               R1               O1               2.27     80.7     1098.7   1.0      0                        
 S1               R1               J1               0.24     100      522.7    1.0      0                        
 S2               R1               J2               0.22     100      522.7    1.0      0                        
 S3               R1               O1               0.54     100      1176.1   1.0      0                        
@@ -96,6 +96,9 @@ PermPave1        DRAIN      1          0.5        12         6          0       
 [LID_USAGE]
 ;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo          FromPerv  
 ;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ---------------- ----------
+H1               PermPave1        1       7930       13         0          15         0          *                        *                0               
+H2               PermPave1        1       7930       13         0          15         0          *                        *                0               
+H3               PermPave1        1       7930       13         0          15         0          *                        *                0               
 
 [JUNCTIONS]
 ;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
@@ -156,6 +159,12 @@ PHL              FILE "Philly_QCLCD_hrly_2014Prc_Modified.dat"
 SUBCATCHMENTS ALL
 NODES ALL
 LINKS ALL
+
+[ADJUSTMENTS]
+;;Parameter    Subcatchment     Monthly Adjustments
+TEMPERATURE                 4.2120 3.9420 2.6280 4.3200 3.8340 4.4280 5.7780 7.0380 6.1380 3.8340 2.8800 5.0940
+EVAPORATION                     0.0070 0.0130 0.0120 0.0160 0.0140 0.0120 0.0160 0.0250 0.0140 0.0070 0.0080 0.0100
+RAINFALL                        1.099  1.051  1.129  1.127  0.977  0.973  1.132  1.134  1.063  0.996  1.045  1.061 
 
 [TAGS]
 
