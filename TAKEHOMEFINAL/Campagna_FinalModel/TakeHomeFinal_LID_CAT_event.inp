@@ -1,0 +1,246 @@
+[TITLE]
+;;Project Title/Notes
+
+[OPTIONS]
+;;Option             Value
+FLOW_UNITS           CFS
+INFILTRATION         MODIFIED_GREEN_AMPT
+FLOW_ROUTING         DYNWAVE
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+ALLOW_PONDING        YES
+SKIP_STEADY_STATE    NO
+
+START_DATE           01/01/2014
+START_TIME           00:00:00
+REPORT_START_DATE    01/01/2014
+REPORT_START_TIME    00:00:00
+END_DATE             01/02/2014
+END_TIME             00:00:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:00:05
+WET_STEP             00:00:05
+DRY_STEP             00:01:00
+ROUTING_STEP         0:00:05 
+RULE_STEP            00:00:00
+
+INERTIAL_DAMPING     PARTIAL
+NORMAL_FLOW_LIMITED  BOTH
+FORCE_MAIN_EQUATION  H-W
+VARIABLE_STEP        0.75
+LENGTHENING_STEP     0
+MIN_SURFAREA         12.566
+MAX_TRIALS           8
+HEAD_TOLERANCE       0.005
+SYS_FLOW_TOL         5
+LAT_FLOW_TOL         5
+MINIMUM_STEP         0.5
+THREADS              1
+
+[EVAPORATION]
+;;Data Source    Parameters
+;;-------------- ----------------
+MONTHLY          0.07   0.07   0.07   0.15   0.18   0.21   0.22   0.19   0.14   0.09   0.07   0.07  
+DRY_ONLY         NO
+
+[RAINGAGES]
+;;Name           Format    Interval SCF      Source    
+;;-------------- --------- ------ ------ ----------
+R1               INTENSITY 0:05     1.0      TIMESERIES 10yr2hr         
+
+[SUBCATCHMENTS]
+;;Name           Rain Gage        Outlet           Area     %Imperv  Width    %Slope   CurbLen  SnowPack        
+;;-------------- ---------------- ---------------- -------- -------- -------- -------- -------- ----------------
+H1               R1               J1               2.17     80.7     1050.3   1.0      0                        
+H2               R1               J2               2.08     80.7     1006.7   1.0      0                        
+H3               R1               O1               2.27     80.7     1098.7   1.0      0                        
+S1               R1               J1               0.24     100      522.7    1.0      0                        
+S2               R1               J2               0.22     100      522.7    1.0      0                        
+S3               R1               O1               0.54     100      1176.1   1.0      0                        
+L1               R1               S3               0.56     0        50       1.0      0                        
+
+[SUBAREAS]
+;;Subcatchment   N-Imperv   N-Perv     S-Imperv   S-Perv     PctZero    RouteTo    PctRouted 
+;;-------------- ---------- ---------- ---------- ---------- ---------- ---------- ----------
+H1               0.012      0.13       0.05       0.10       25         OUTLET    
+H2               0.012      0.13       0.05       0.1        25         OUTLET    
+H3               0.012      0.13       0.05       0.1        25         OUTLET    
+S1               0.013      0.1        0.05       0.05       25         OUTLET    
+S2               0.013      0.1        0.05       0.05       25         OUTLET    
+S3               0.013      0.1        0.05       0.05       25         OUTLET    
+L1               0.013      0.13       0.05       0.1        25         OUTLET    
+
+[INFILTRATION]
+;;Subcatchment   Suction    Ksat       IMD       
+;;-------------- ---------- ---------- ----------
+H1               4.33       0.43       0.25      
+H2               4.33       0.43       0.25      
+H3               4.33       0.43       0.25      
+S1               4.33       0.43       0.25      
+S2               4.33       0.43       0.25      
+S3               4.33       0.43       0.25      
+L1               4.33       0.43       0.25      
+
+[LID_CONTROLS]
+;;Name           Type/Layer Parameters
+;;-------------- ---------- ----------
+PermPave1        PP
+PermPave1        SURFACE    0.0        0.0        0.014      1.0        5         
+PermPave1        PAVEMENT   4          0.21       0          200        320        365        0.5       
+PermPave1        SOIL       18         0.5        0.2        0.1        0.5        30         3.5       
+PermPave1        STORAGE    18         0.75       0.5        0         
+PermPave1        DRAIN      1          0.5        12         6          0          0                    
+
+[LID_USAGE]
+;;Subcatchment   LID Process      Number  Area       Width      InitSat    FromImp    ToPerv     RptFile                  DrainTo          FromPerv  
+;;-------------- ---------------- ------- ---------- ---------- ---------- ---------- ---------- ------------------------ ---------------- ----------
+H1               PermPave1        1       7930       13         0          15         0          *                        *                0               
+H2               PermPave1        1       7930       13         0          15         0          *                        *                0               
+H3               PermPave1        1       7930       13         0          15         0          *                        *                0               
+
+[JUNCTIONS]
+;;Name           Elevation  MaxDepth   InitDepth  SurDepth   Aponded   
+;;-------------- ---------- ---------- ---------- ---------- ----------
+J1               40         0          0          0          0         
+J2               38         0          0          0          0         
+
+[OUTFALLS]
+;;Name           Elevation  Type       Stage Data       Gated    Route To        
+;;-------------- ---------- ---------- ---------------- -------- ----------------
+O1               36         FREE                        NO                       
+
+[CONDUITS]
+;;Name           From Node        To Node          Length     Roughness  InOffset   OutOffset  InitFlow   MaxFlow   
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+C1               J1               J2               186.46     0.013      0.5        0.5        0          0         
+C2               J2               O1               201.43     0.013      0.5        0.5        0          0         
+
+[XSECTIONS]
+;;Link           Shape        Geom1            Geom2      Geom3      Geom4      Barrels    Culvert   
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ---------- ----------
+C1               CIRCULAR     1                0          0          0          1                    
+C2               CIRCULAR     1                0          0          0          1                    
+
+[TIMESERIES]
+;;Name           Date       Time       Value     
+;;-------------- ---------- ---------- ----------
+PHL              FILE "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\TAKEHOMEFINAL\Philly_QCLCD_hrly_2014Prc_Modified.dat"
+;
+10yr2hr                     0:00       0.6288    
+10yr2hr                     0:05       0.9432    
+10yr2hr                     0:10       0.9432    
+10yr2hr                     0:15       1.572     
+10yr2hr                     0:20       2.2008    
+10yr2hr                     0:25       4.0872    
+10yr2hr                     0:30       8.1744    
+10yr2hr                     0:35       3.144     
+10yr2hr                     0:40       1.8864    
+10yr2hr                     0:45       1.2576    
+10yr2hr                     0:50       0.9432    
+10yr2hr                     0:55       0.9432    
+10yr2hr                     1:00       0.6288    
+10yr2hr                     1:05       0.6288    
+10yr2hr                     1:10       0.6288    
+10yr2hr                     1:15       0.3144    
+10yr2hr                     1:20       0.3144    
+10yr2hr                     1:25       0.3144    
+10yr2hr                     1:30       0.3144    
+10yr2hr                     1:35       0.3144    
+10yr2hr                     1:40       0.3144    
+10yr2hr                     1:45       0.3144    
+10yr2hr                     1:50       0.3144    
+10yr2hr                     1:55       0.3144    
+10yr2hr                     2:00       0         
+
+[REPORT]
+;;Reporting Options
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[ADJUSTMENTS]
+;;Parameter    Subcatchment     Monthly Adjustments
+TEMPERATURE                 4.2120 3.9420 2.6280 4.3200 3.8340 4.4280 5.7780 7.0380 6.1380 3.8340 2.8800 5.0940
+EVAPORATION                     0.0070 0.0130 0.0120 0.0160 0.0140 0.0120 0.0160 0.0250 0.0140 0.0070 0.0080 0.0100
+RAINFALL                        1.099  1.051  1.129  1.127  0.977  0.973  1.132  1.134  1.063  0.996  1.045  1.061 
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 2728339.875 264934.375 2731692.875 266722.875
+Units      Feet
+
+[COORDINATES]
+;;Node           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+J1               2730292.826        265993.376        
+J2               2730438.999        266109.132        
+O1               2730599.536        266230.802        
+
+[VERTICES]
+;;Link           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+
+[Polygons]
+;;Subcatchment   X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+H1               2729834.873        266345.713        
+H1               2730158.482        265895.364        
+H1               2730285.222        265989.151        
+H1               2730293.671        266000.136        
+H1               2729969.217        266447.949        
+H1               2729835.718        266350.782        
+H2               2729990.340        266453.864        
+H2               2730303.810        266017.879        
+H2               2730315.639        266014.499        
+H2               2730435.619        266108.287        
+H2               2730434.774        266116.736        
+H2               2730124.684        266551.031        
+H2               2730111.166        266551.031        
+H2               2729987.806        266459.778        
+H3               2730449.983        266127.720        
+H3               2730459.277        266124.341        
+H3               2730596.156        266229.112        
+H3               2730593.622        266238.406        
+H3               2730286.066        266666.787        
+H3               2730274.237        266666.787        
+H3               2730135.669        266563.705        
+S1               2729970.504        266448.015        
+S1               2730294.514        266000.698        
+S1               2730316.159        266013.816        
+S1               2730303.697        266018.407        
+S1               2729987.557        266457.853        
+S1               2729969.848        266447.359        
+S2               2730117.784        266551.196        
+S2               2730124.763        266550.562        
+S2               2730435.679        266116.550        
+S2               2730435.679        266112.108        
+S2               2730455.983        266126.068        
+S2               2730450.273        266128.606        
+S2               2730136.185        266563.887        
+S2               2730119.053        266551.196        
+S3               2730186.037        265857.883        
+S3               2730617.497        266191.774        
+S3               2730594.688        266226.620        
+S3               2730456.570        266122.081        
+S3               2730320.353        266013.741        
+S3               2730285.507        265989.032        
+S3               2730159.427        265896.531        
+L1               2730237.230        265875.061        
+L1               2730280.571        265864.225        
+L1               2730608.587        266110.484        
+L1               2730603.662        266155.795        
+L1               2730589.872        266168.601        
+L1               2730234.274        265894.761        
+
+[SYMBOLS]
+;;Gage           X-Coord            Y-Coord           
+;;-------------- ------------------ ------------------
+R1               2729781.463        266352.098        
+
+
+[BACKDROP]
+FILE       "C:\Users\msc94\Documents\GitHub\GrandAnseBeach_SWMM\TAKEHOMEFINAL\tif1.bmp"
+DIMENSIONS 2728339.875 264934.375 2731692.875 266722.875

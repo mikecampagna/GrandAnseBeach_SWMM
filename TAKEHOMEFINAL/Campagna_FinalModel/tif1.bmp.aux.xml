@@ -1,0 +1,12 @@
+<PAMDataset>
+  <SRS>PROJCS["NAD_1983_Pennsylvania_South_ftUS",GEOGCS["GCS_NAD83_1986",DATUM["North_American_Datum_1983",SPHEROID["GRS_1980",6378137.0,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0.0,AUTHORITY["EPSG","8901"]],UNIT["Degree",0.0174532925199433,AUTHORITY["EPSG","9102"]]],PROJECTION["Lambert_Conformal_Conic_2SP",AUTHORITY["Esri","43020"]],PARAMETER["false_easting",1968500.0,AUTHORITY["Esri","100001"]],PARAMETER["false_northing",0.0,AUTHORITY["Esri","100002"]],PARAMETER["central_meridian",-77.75,AUTHORITY["Esri","100010"]],PARAMETER["standard_parallel_1",39.933333333333,AUTHORITY["Esri","100025"]],PARAMETER["standard_parallel_2",40.966666666667,AUTHORITY["Esri","100026"]],PARAMETER["latitude_of_origin",39.333333333333,AUTHORITY["Esri","100021"]],UNIT["US survey foot",0.3048006096012223,AUTHORITY["EPSG","9003"]]]</SRS>
+  <Metadata>
+    <MDI key="DataType">Thematic</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <NoDataValue>2.56000000000000E+002</NoDataValue>
+    <Metadata>
+      <MDI key="SourceBandIndex">0</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
